@@ -1,0 +1,17 @@
+{
+  "name": "use-scroll-shadow-demo",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "author": "necolo",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --dist-dir ."
+  },
+  "dependencies": {
+    "parcel": "^2.3.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "use-scroll-shadow": "^1.0.4"
+  }
+}
