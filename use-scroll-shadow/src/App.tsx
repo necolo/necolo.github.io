@@ -1,12 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { useScrollShadow } from 'use-scroll-shadow';
 
 function App() {
-  const wrapperRef = useRef(null);
-  const contentRef = useRef(null);
   const [cardNum, setCardNum] = useState(4);
-  useScrollShadow(wrapperRef, contentRef);
+  const { elementRef } = useScrollShadow();
 
   const cardStyle: React.CSSProperties = {
     backgroundColor: 'white',
@@ -31,8 +29,8 @@ function App() {
 
   return (
     <>
-      <div ref={wrapperRef}>
-        <div ref={contentRef} style={contentStyle}>
+      <div>
+        <div ref={elementRef} style={contentStyle}>
           {new Array(cardNum).fill(1).map((_, i) => (
             <div key={i} style={cardStyle}>
               card {i + 1}
